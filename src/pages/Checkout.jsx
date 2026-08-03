@@ -5,7 +5,7 @@ import {
   Package, Tag,
 } from 'lucide-react';
 import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import Footer from '../Components/footer';
 import { useShop } from '../context/ShopContext';
 import './Checkout.css';
 

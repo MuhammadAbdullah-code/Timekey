@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, ShoppingCart, Trash2, Sparkles } from 'lucide-react';
 import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import Footer from '../Components/footer';
 import { useShop } from '../context/ShopContext';
 import './Wishlist.css';
 
