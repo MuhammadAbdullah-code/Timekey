@@ -1,0 +1,520 @@
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 16px;
+}
+
+/* ----------------------------------------------------------
+   LOGO
+---------------------------------------------------------- */
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.header-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* ----------------------------------------------------------
+   DESKTOP NAV
+---------------------------------------------------------- */
+
+.header-nav {
+  display: none;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4B5563;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.header-nav-link:hover {
+  color: var(--color-accent);
+}
+
+/* ----------------------------------------------------------
+   SEARCH BAR
+---------------------------------------------------------- */
+
+.header-search {
+  display: none;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+  pointer-events: none;
+}
+
+.header-search-input {
+  width: 240px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: 8px 16px 8px 36px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal);
+}
+
+.header-search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.header-search-input:focus {
+  border-color: var(--color-accent);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+/* ----------------------------------------------------------
+   RIGHT ACTIONS
+---------------------------------------------------------- */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.header-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  border: none;
+  background: transparent;
+  color: #4B5563;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.header-icon-btn:hover {
+  background-color: var(--color-muted);
+  color: var(--color-accent);
+}
+
+.header-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* ----------------------------------------------------------
+   PROFILE DROPDOWN
+---------------------------------------------------------- */
+
+.header-profile {
+  position: relative;
+  display: none;
+}
+
+.header-profile-btn {
+  width: auto;
+  gap: 4px;
+  padding: 0 4px;
+}
+
+.header-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 192px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  z-index: var(--z-dropdown);
+}
+
+.header-dropdown-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #374151;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.header-dropdown-item:hover {
+  background-color: var(--color-surface);
+  color: var(--color-accent);
+}
+
+.header-dropdown-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 6px 0;
+}
+
+/* ----------------------------------------------------------
+   HAMBURGER
+---------------------------------------------------------- */
+
+.header-hamburger {
+  /* visible on mobile, hidden on desktop — controlled via media queries */
+}
+
+/* ----------------------------------------------------------
+   MOBILE MENU
+---------------------------------------------------------- */
+
+.header-mobile-menu {
+  border-top: 1px solid var(--color-border);
+  background-color: #ffffff;
+  padding: 24px 16px;
+}
+
+.mobile-search-wrap {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.mobile-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+  pointer-events: none;
+}
+
+.mobile-search-input {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: 12px 16px 12px 36px;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.mobile-search-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 12px 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4B5563;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--color-muted);
+  color: var(--color-accent);
+}
+
+.mobile-profile-section {
+  border-top: 1px solid var(--color-border);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ----------------------------------------------------------
+   OVERLAY
+---------------------------------------------------------- */
+
+.header-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-dropdown) - 1);
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+---------------------------------------------------------- */
+
+/* Tablet and up: show search bar */
+@media (min-width: 768px) {
+  .header-search {
+    display: block;
+  }
+
+  .header-search-mobile {
+    display: none;
+  }
+}
+
+/* Desktop: show nav and profile dropdown, hide hamburger */
+@media (min-width: 1024px) {
+  .header-inner {
+    height: 72px;
+  }
+
+  .header-logo-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .header-logo-text {
+    font-size: 22px;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-profile {
+    display: block;
+  }
+
+  .header-hamburger {
+    display: none;
+  }
+
+  .header-search-input {
+    width: 260px;
+  }
+}
+
+/* ----------------------------------------------------------
+   Logo as button (for SPA navigation)
+---------------------------------------------------------- */
+
+.header-logo-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ----------------------------------------------------------
+   Auth buttons (Sign In / Register) — shown when logged out
+---------------------------------------------------------- */
+
+.header-auth-btns {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-auth-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #4B5563;
+  padding: 6px 10px;
+  transition: color var(--transition-fast);
+}
+
+.header-auth-link:hover {
+  color: #111111;
+}
+
+.header-auth-register {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  transition: background-color var(--transition-normal), transform var(--transition-fast);
+}
+
+.header-auth-register:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+}
+
+/* ----------------------------------------------------------
+   Profile dropdown — logged-in user email
+---------------------------------------------------------- */
+
+.header-dropdown-user {
+  padding: 10px 16px 6px;
+}
+
+.header-dropdown-email {
+  font-size: 12px;
+  color: #6B7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+}
+
+.header-dropdown-logout {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #ef4444;
+}
+
+.header-dropdown-logout:hover {
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* ----------------------------------------------------------
+   Mobile — user email + logout
+---------------------------------------------------------- */
+
+.mobile-user-email {
+  font-size: 12px;
+  color: #9CA3AF;
+  padding: 0 8px 8px;
+}
+
+.mobile-logout-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #ef4444;
+}
+
+/* ----------------------------------------------------------
+   Show auth buttons on desktop
+---------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  .header-auth-btns {
+    display: flex;
+  }
+
+  /* hide the old profile icon button when showing auth btns — handled in JSX */
+}
+
+/* ----------------------------------------------------------
+   Initials avatar button (replaces generic User icon)
+---------------------------------------------------------- */
+
+.header-avatar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast);
+}
+
+.header-avatar-btn:hover {
+  background-color: var(--color-muted);
+}
+
+.header-avatar-initials {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--color-accent);
+}

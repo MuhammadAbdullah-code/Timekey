@@ -1,0 +1,955 @@
+/* =========================================================
+   GLOBAL CSS DESIGN SYSTEM
+   Premium E-Commerce / Modern Web Design System
+   Based on Global Style Guide
+========================================================= */
+
+/* =========================================================
+   1. GOOGLE FONTS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   2. ROOT DESIGN TOKENS
+========================================================= */
+
+:root {
+
+  /* -------------------------------------------------------
+     PRIMARY COLORS
+  ------------------------------------------------------- */
+
+  --color-primary: #0B1328;
+  --color-primary-light: #17213A;
+  --color-primary-dark: #070D1C;
+
+  --color-accent: #D4AF37;
+  --color-accent-light: #F7E59E;
+  --color-accent-dark: #B8941F;
+
+  --color-secondary: #F8E8D5;
+
+  --color-background: #FFFFFF;
+
+
+  /* -------------------------------------------------------
+     TEXT COLORS
+  ------------------------------------------------------- */
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+  --color-text-white: #FFFFFF;
+
+
+  /* -------------------------------------------------------
+     NEUTRAL COLORS
+  ------------------------------------------------------- */
+
+  --color-border: #E5E7EB;
+  --color-surface: #F9FAFB;
+  --color-muted: #F3F4F6;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+
+  /* -------------------------------------------------------
+     SEMANTIC COLORS
+  ------------------------------------------------------- */
+
+  --color-success: #10B981;
+  --color-info: #3B82F6;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+
+  /* -------------------------------------------------------
+     TYPOGRAPHY
+  ------------------------------------------------------- */
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+
+
+  /* -------------------------------------------------------
+     FONT SIZES
+  ------------------------------------------------------- */
+
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+
+  --font-size-body-large: 16px;
+  --font-size-body: 14px;
+  --font-size-body-small: 12px;
+
+
+  /* -------------------------------------------------------
+     FONT WEIGHTS
+  ------------------------------------------------------- */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+
+  /* -------------------------------------------------------
+     LINE HEIGHT
+  ------------------------------------------------------- */
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+
+  /* -------------------------------------------------------
+     SPACING SYSTEM
+  ------------------------------------------------------- */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+
+  /* -------------------------------------------------------
+     BORDER RADIUS
+  ------------------------------------------------------- */
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+
+  /* -------------------------------------------------------
+     SHADOWS
+  ------------------------------------------------------- */
+
+  --shadow-sm:
+    0 1px 2px rgba(17, 24, 39, 0.05);
+
+  --shadow-md:
+    0 4px 12px rgba(17, 24, 39, 0.08);
+
+  --shadow-lg:
+    0 12px 24px rgba(17, 24, 39, 0.10);
+
+
+  /* -------------------------------------------------------
+     GRADIENTS
+  ------------------------------------------------------- */
+
+  --gradient-accent:
+    linear-gradient(
+      90deg,
+      #D4AF37,
+      #F7E59E
+    );
+
+
+  /* -------------------------------------------------------
+     TRANSITIONS
+  ------------------------------------------------------- */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+
+  /* -------------------------------------------------------
+     CONTAINER
+  ------------------------------------------------------- */
+
+  --container-width: 1200px;
+
+  --container-padding: 24px;
+
+
+  /* -------------------------------------------------------
+     Z-INDEX
+  ------------------------------------------------------- */
+
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-modal: 1200;
+  --z-toast: 1300;
+
+}
+
+
+/* =========================================================
+   3. CSS RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+
+  line-height: var(--line-height-normal);
+
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* =========================================================
+   4. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  /* No forced color — let Tailwind / component styles control color */
+  line-height: var(--line-height-tight);
+}
+
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+h3 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+h4 {
+  font-family: var(--font-body);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+p {
+  /* No forced color — let component styles control color */
+  line-height: var(--line-height-relaxed);
+}
+
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+
+.text-white {
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   5. CONTAINER
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+
+/* =========================================================
+   6. SECTION
+========================================================= */
+
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+
+.section-sm {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+
+.section-lg {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+
+/* =========================================================
+   7. BUTTON SYSTEM
+========================================================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-2);
+
+  min-height: 44px;
+
+  padding: 10px 24px;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+
+  text-align: center;
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Primary */
+
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* Secondary */
+
+.btn-secondary {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+
+.btn-secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+
+/* Accent */
+
+.btn-accent {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}
+
+
+.btn-accent:hover {
+  background-color: var(--color-accent-dark);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* Text Button */
+
+.btn-text {
+  min-height: auto;
+
+  padding: 4px 0;
+
+  color: var(--color-primary);
+
+  background: transparent;
+}
+
+
+.btn-text:hover {
+  color: var(--color-accent);
+  transform: none;
+}
+
+
+/* =========================================================
+   8. CARD
+========================================================= */
+
+.card {
+  padding: var(--space-6);
+
+  background-color: var(--color-white);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   9. PRODUCT CARD
+========================================================= */
+
+.product-card {
+  overflow: hidden;
+
+  background-color: var(--color-white);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+
+.product-card-image {
+  overflow: hidden;
+
+  background-color: var(--color-surface);
+}
+
+
+.product-card-image img {
+  width: 100%;
+
+  transition: transform var(--transition-slow);
+}
+
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.04);
+}
+
+
+.product-card-content {
+  padding: var(--space-5);
+}
+
+
+.product-card-title {
+  margin-bottom: var(--space-2);
+
+  color: var(--color-primary);
+
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.product-card-price {
+  color: var(--color-primary);
+
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.product-card-old-price {
+  margin-left: var(--space-2);
+
+  color: var(--color-text-muted);
+
+  font-size: 13px;
+
+  text-decoration: line-through;
+}
+
+
+/* =========================================================
+   10. BADGES
+========================================================= */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 10px;
+
+  border-radius: var(--radius-full);
+
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+}
+
+
+.badge-new {
+  color: var(--color-success);
+  background-color: #ECFDF5;
+}
+
+
+.badge-sale {
+  color: var(--color-error);
+  background-color: #FEF2F2;
+}
+
+
+.badge-luxury {
+  color: var(--color-accent-dark);
+  background-color: var(--color-secondary);
+}
+
+
+.badge-popular {
+  color: var(--color-info);
+  background-color: #EFF6FF;
+}
+
+
+/* =========================================================
+   11. FORM ELEMENTS
+========================================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+
+  margin-bottom: var(--space-5);
+}
+
+
+.form-label {
+  color: var(--color-text-primary);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+}
+
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  color: var(--color-text-primary);
+
+  background-color: var(--color-white);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  outline: none;
+
+  transition:
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-accent);
+
+  box-shadow:
+    0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+
+.form-textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  color: var(--color-text-muted);
+
+  background-color: var(--color-muted);
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   12. DIVIDER
+========================================================= */
+
+.divider {
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--color-border);
+
+  border: none;
+}
+
+
+.divider-accent {
+  background-color: var(--color-accent);
+}
+
+
+/* =========================================================
+   13. LINKS
+========================================================= */
+
+.link {
+  color: var(--color-primary);
+
+  transition: color var(--transition-normal);
+}
+
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+
+/* =========================================================
+   14. ALERTS / NOTIFICATIONS
+========================================================= */
+
+.alert {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: var(--space-3);
+
+  padding: var(--space-4);
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid transparent;
+}
+
+
+.alert-success {
+  color: #047857;
+  background-color: #ECFDF5;
+  border-color: #A7F3D0;
+}
+
+
+.alert-info {
+  color: #1D4ED8;
+  background-color: #EFF6FF;
+  border-color: #BFDBFE;
+}
+
+
+.alert-warning {
+  color: #B45309;
+  background-color: #FFFBEB;
+  border-color: #FDE68A;
+}
+
+
+.alert-error {
+  color: #B91C1C;
+  background-color: #FEF2F2;
+  border-color: #FECACA;
+}
+
+
+/* =========================================================
+   15. ACCENT GRADIENT
+========================================================= */
+
+.accent-gradient {
+  background: var(--gradient-accent);
+}
+
+
+.text-gradient {
+  background: var(--gradient-accent);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   16. UTILITY CLASSES
+========================================================= */
+
+.text-center {
+  text-align: center;
+}
+
+
+.text-left {
+  text-align: left;
+}
+
+
+.text-right {
+  text-align: right;
+}
+
+
+.flex {
+  display: flex;
+}
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.items-center {
+  align-items: center;
+}
+
+
+.justify-center {
+  justify-content: center;
+}
+
+
+.justify-between {
+  justify-content: space-between;
+}
+
+
+.gap-1 {
+  gap: var(--space-1);
+}
+
+
+.gap-2 {
+  gap: var(--space-2);
+}
+
+
+.gap-3 {
+  gap: var(--space-3);
+}
+
+
+.gap-4 {
+  gap: var(--space-4);
+}
+
+
+.gap-6 {
+  gap: var(--space-6);
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================================================
+   17. FOCUS ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   18. RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 992px) {
+
+  :root {
+    --font-size-h1: 36px;
+    --font-size-h2: 30px;
+  }
+
+  .section {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  :root {
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 22px;
+    --font-size-h4: 18px;
+
+    --container-padding: 16px;
+  }
+
+  .section {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  :root {
+    --font-size-h1: 28px;
+    --font-size-h2: 24px;
+    --font-size-h3: 20px;
+  }
+
+}
+
+/* =========================================================
+   END OF GLOBAL DESIGN SYSTEM
+========================================================= */

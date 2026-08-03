@@ -1,0 +1,328 @@
+/* ==========================================================
+   LEGAL PAGES — Privacy Policy, Terms of Service, Cookie Policy
+========================================================== */
+
+/* ── Hero ── */
+.legal-hero {
+  background: #111111;
+  border-bottom: 1px solid #222;
+}
+
+.legal-hero-inner {
+  padding-top: 64px;
+  padding-bottom: 48px;
+}
+
+.legal-hero-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #D4AF37;
+  margin-bottom: 12px;
+}
+
+.legal-hero-title {
+  font-family: var(--font-heading, Georgia, serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.legal-hero-meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── Two-column layout ── */
+.legal-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0 56px;
+  padding-top: 56px;
+  padding-bottom: 96px;
+  align-items: start;
+}
+
+/* ── Sidebar TOC ── */
+.legal-toc {
+  position: sticky;
+  top: 96px;
+  padding-right: 24px;
+  border-right: 1px solid #ebebeb;
+}
+
+.legal-toc-heading {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+
+.legal-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legal-toc-link {
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  line-height: 1.4;
+  transition: color 0.18s;
+}
+
+.legal-toc-link:hover {
+  color: #1a1a1a;
+}
+
+.legal-toc-divider {
+  height: 1px;
+  background: #ebebeb;
+  margin: 18px 0;
+}
+
+.legal-toc-also {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* ── Article content ── */
+.legal-content {
+  max-width: 720px;
+  min-width: 0;
+}
+
+.legal-intro {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* Sections */
+.legal-section {
+  margin-bottom: 48px;
+  scroll-margin-top: 100px;
+}
+
+.legal-section-title {
+  font-family: var(--font-heading, Georgia, serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #f0f0f0;
+}
+
+.legal-block {
+  margin-bottom: 20px;
+}
+
+.legal-block-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.legal-body {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.legal-list {
+  padding-left: 20px;
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legal-list li {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #555;
+}
+
+.legal-inline-link {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.18s;
+}
+
+.legal-inline-link:hover {
+  color: #D4AF37;
+}
+
+/* ── Cookie-specific ── */
+
+/* Type cards grid */
+.cookie-types-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.cookie-type-card {
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.cookie-type-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cookie-type-icon {
+  font-size: 16px;
+}
+
+.cookie-type-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.cookie-type-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+/* Cookie table */
+.cookie-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 8px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+}
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.cookie-table thead {
+  background: #f7f7f7;
+}
+
+.cookie-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  border-bottom: 1px solid #ebebeb;
+  white-space: nowrap;
+}
+
+.cookie-table td {
+  padding: 12px 16px;
+  color: #555;
+  border-bottom: 1px solid #f4f4f4;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.cookie-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cookie-table tbody tr:hover td {
+  background: #fafafa;
+}
+
+.cookie-code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Type badges */
+.cookie-type-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cookie-type-badge--strictly-necessary { background: #e8f5e9; color: #2e7d32; }
+.cookie-type-badge--functional         { background: #e3f2fd; color: #1565c0; }
+.cookie-type-badge--analytics          { background: #fff8e1; color: #f57f17; }
+.cookie-type-badge--marketing          { background: #fce4ec; color: #880e4f; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .legal-toc {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #ebebeb;
+    padding-right: 0;
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .legal-toc-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px 0;
+  }
+
+  .legal-toc-link {
+    padding: 4px 12px 4px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .cookie-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-hero-inner {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+}

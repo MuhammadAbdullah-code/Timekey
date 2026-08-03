@@ -1,0 +1,133 @@
+export const products = [
+  {
+    id: 1,
+    name: "Sculptural Wool Coat",
+    price: 340,
+    oldPrice: null,
+    badge: "NEW ARRIVAL",
+    category: "Apparel",
+    rating: 4.8,
+    reviewCount: 24,
+    img: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop",
+    ],
+    colors: [
+      { name: "Charcoal", hex: "#1a1a1a" },
+      { name: "Oatmeal",  hex: "#e5e0d8" },
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Crafted from premium merino wool, this sculptural coat redefines modern minimalism. The structured silhouette creates a bold yet refined statement, perfect for the discerning individual who values both form and function.",
+    details: [
+      "100% Merino Wool",
+      "Dry clean only",
+      "Structured shoulder silhouette",
+      "Hidden button closure",
+      "Two side pockets",
+      "Fully lined in silk blend",
+    ],
+    inStock: true,
+  },
+  {
+    id: 2,
+    name: "Executive Leather Tote",
+    price: 325,
+    oldPrice: null,
+    badge: "LIMITED",
+    category: "Accessories",
+    rating: 4.9,
+    reviewCount: 18,
+    img: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&auto=format&fit=crop",
+    ],
+    colors: [
+      { name: "Cognac",    hex: "#7B3F00" },
+      { name: "Midnight",  hex: "#1a1a2e" },
+    ],
+    sizes: ["One Size"],
+    description:
+      "Full-grain leather tote designed for the modern executive. Spacious enough for a 15\" laptop with dedicated pockets for organisation, yet refined enough to complement any boardroom or weekend ensemble.",
+    details: [
+      "Full-grain vegetable-tanned leather",
+      "Antique brass hardware",
+      "Interior laptop sleeve (fits up to 15\")",
+      "Magnetic snap closure",
+      "Hand-stitched detailing",
+      "Dimensions: 38 × 30 × 12 cm",
+    ],
+    inStock: true,
+  },
+  {
+    id: 3,
+    name: "Atelier Ceramic Lamp",
+    price: 180,
+    oldPrice: null,
+    badge: null,
+    category: "Home",
+    rating: 4.7,
+    reviewCount: 6,
+    img: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1513506003901-1e6a35045050?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&auto=format&fit=crop",
+    ],
+    colors: [
+      { name: "Matte Black", hex: "#2a2a2a" },
+      { name: "Sand",        hex: "#c9b99a" },
+    ],
+    sizes: ["Standard"],
+    description:
+      "Hand-thrown ceramic lamp base with a matte glaze finish. Each piece is unique, bearing the subtle marks of artisan craftsmanship. Pairs beautifully with a warm-toned linen shade.",
+    details: [
+      "Hand-thrown stoneware ceramic",
+      "Matte glaze finish",
+      "E27 bulb socket (bulb not included)",
+      "Cord length: 180 cm",
+      "Height: 42 cm (base only)",
+      "Each piece is unique — slight variations are intentional",
+    ],
+    inStock: true,
+  },
+  {
+    id: 4,
+    name: "Seiko-01 Sneakers",
+    price: 210,
+    oldPrice: 290,
+    badge: null,
+    category: "Apparel",
+    rating: 4.6,
+    reviewCount: 41,
+    img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&auto=format&fit=crop",
+    ],
+    colors: [
+      { name: "White", hex: "#f5f5f5" },
+      { name: "Black", hex: "#111111" },
+    ],
+    sizes: ["UK 6", "UK 7", "UK 8", "UK 9", "UK 10", "UK 11"],
+    description:
+      "A clean, contemporary silhouette with premium leather uppers and a cushioned sole unit. The Seiko-01 is designed to transition effortlessly from casual wear to smart-casual settings.",
+    details: [
+      "Full-grain leather upper",
+      "Cushioned EVA midsole",
+      "Rubber outsole",
+      "Leather lining",
+      "Lace-up closure",
+      "Made in Portugal",
+    ],
+    inStock: true,
+  },
+];
+
+export const getProductById = (id) =>
+  products.find((p) => p.id === Number(id)) || null;
