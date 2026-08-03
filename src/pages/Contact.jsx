@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import './Contact.css';
 
 const contactInfo = [

@@ -5,7 +5,7 @@ import {
   Clock, ShoppingBag, ArrowRight, RotateCcw, MessageSquare,
 } from 'lucide-react';
 import Header from '../Components/Header';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import { useShop } from '../context/ShopContext';
 import './Orders.css';
 

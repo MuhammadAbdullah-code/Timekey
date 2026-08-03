@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Shield, CheckCircle, XCircle, LogOut, Package, Heart, Edit2, Lock, Save, X, Eye, EyeOff } from 'lucide-react';
 import Header from '../Components/Header';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import authService from '../services/authService';
 import './Account.css';
 

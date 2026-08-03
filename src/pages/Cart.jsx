@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, Plus, Minus, ShoppingBag, ArrowRight, Tag, Truck, RefreshCw, Shield, Lock } from 'lucide-react';
 import Header from '../Components/Header';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import { useShop } from '../context/ShopContext';
 import './Cart.css';
 

@@ -6,7 +6,7 @@ import { useShop } from '../context/ShopContext';
 import cartService from '../services/cartService';
 import productService from '../services/productService';
 import Header from './Header';
-import Footer from './footer';
+import Footer from './Footer';
 import './ProductDetail.css';
 
 const StarRating = ({ rating }) => (

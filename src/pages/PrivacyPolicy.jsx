@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import './LegalPage.css';
 import './pages.css';
 
