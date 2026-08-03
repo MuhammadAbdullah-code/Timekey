@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Heart, SlidersHorizontal, X } from 'lucide-react';
 import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import Footer from '../Components/footer';
 import productService from '../services/productService';
 import { useShop } from '../context/ShopContext';
 import './Products.css';
